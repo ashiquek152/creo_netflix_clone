@@ -1,4 +1,4 @@
-import 'package:creo_netflix_clone/app/modules/movie_list_screen/widgets/movies_list.dart';
+import 'package:creo_netflix_clone/app/widgets/movies_list.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

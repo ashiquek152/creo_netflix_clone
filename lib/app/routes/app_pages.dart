@@ -8,6 +8,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/movie_list_screen/bindings/movie_list_screen_binding.dart';
 import '../modules/movie_list_screen/views/movie_list_screen_view.dart';
+import '../modules/show_details_screen/bindings/show_details_screen_binding.dart';
+import '../modules/show_details_screen/views/show_details_screen_view.dart';
 
 part 'app_routes.dart';
 
@@ -34,8 +36,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.MOVIE_LIST_SCREEN,
-      page: () =>  MovieListScreenView(),
+      page: () => const MovieListScreenView(),
       binding: MovieListScreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.SHOW_DETAILS_SCREEN,
+      page: () =>  const ShowDetailsScreenView(),
+      binding: ShowDetailsScreenBinding(),
     ),
   ];
 }

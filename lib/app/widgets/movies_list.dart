@@ -1,5 +1,3 @@
-
-
 import 'package:creo_netflix_clone/app/data/api_services.dart';
 import 'package:creo_netflix_clone/app/data/model/movie_model.dart';
 import 'package:creo_netflix_clone/app/widgets/horizontal_movie_list.dart';
@@ -7,12 +5,10 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-
-
 class MoviesList extends StatelessWidget {
   MoviesList({Key? key, required this.movieType, required this.title})
       : super(key: key);
-      
+
   final apiController = Get.put(APIController());
   final String movieType;
   final String title;
@@ -30,7 +26,7 @@ class MoviesList extends StatelessWidget {
         } else if (snapshot.hasData) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
+            children: [
               const SizedBox(height: 10),
               Text(
                 title,

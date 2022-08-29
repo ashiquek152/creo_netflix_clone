@@ -7,6 +7,7 @@ abstract class Routes {
   static const AUTHENTICATION = _Paths.AUTHENTICATION;
   static const BOTTOM_NAVIGATIONS = _Paths.BOTTOM_NAVIGATIONS;
   static const MOVIE_LIST_SCREEN = _Paths.MOVIE_LIST_SCREEN;
+  static const SHOW_DETAILS_SCREEN = _Paths.SHOW_DETAILS_SCREEN;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const AUTHENTICATION = '/authentication';
   static const BOTTOM_NAVIGATIONS = '/bottom-navigations';
   static const MOVIE_LIST_SCREEN = '/movie-list-screen';
+  static const SHOW_DETAILS_SCREEN = '/show-details-screen';
 }

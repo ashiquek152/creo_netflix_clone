@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,16 +16,8 @@ class TopSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset(
-                  "assets/logo.ico",
-                  fit: BoxFit.cover,
-                  width: 35,
-                ),
-                const Icon(
-                  Icons.person,
-                  color: Colors.white,
-                  size: 35,
-                )
+                Image.asset("assets/logo.ico", fit: BoxFit.cover, width: 35),
+                const Icon(Icons.person, color: Colors.white, size: 35)
               ],
             ),
             SizedBox(height: Get.height * 0.02),
@@ -38,7 +29,7 @@ class TopSection extends StatelessWidget {
                   child: Text(
                     "Tv Shows",
                     style: TextStyle(
-                        color: Colors.white, fontSize: Get.width * 0.06),
+                        color: Colors.white, fontSize: Get.width * 0.04),
                   ),
                 ),
                 TextButton(
@@ -46,7 +37,7 @@ class TopSection extends StatelessWidget {
                   child: Text(
                     "Movies",
                     style: TextStyle(
-                        color: Colors.white, fontSize: Get.width * 0.06),
+                        color: Colors.white, fontSize: Get.width * 0.04),
                   ),
                 ),
                 Row(
@@ -56,8 +47,7 @@ class TopSection extends StatelessWidget {
                       child: Text(
                         "Categories",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: Get.width * 0.06),
+                            color: Colors.white, fontSize: Get.width * 0.04),
                       ),
                     ),
                     const Icon(
@@ -67,7 +57,7 @@ class TopSection extends StatelessWidget {
                   ],
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
