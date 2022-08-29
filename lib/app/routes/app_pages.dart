@@ -16,18 +16,18 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.BOTTOM_NAVIGATIONS;
+  static const INITIAL = Routes.AUTHENTICATION;
 
   static final routes = [
-    GetPage(
-      name: _Paths.HOME,
-      page: () => HomeView(),
-      binding: HomeBinding(),
-    ),
     GetPage(
       name: _Paths.AUTHENTICATION,
       page: () => AuthenticationView(),
       binding: AuthenticationBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME,
+      page: () => HomeView(),
+      binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.BOTTOM_NAVIGATIONS,
@@ -41,7 +41,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SHOW_DETAILS_SCREEN,
-      page: () =>  const ShowDetailsScreenView(),
+      page: () => const ShowDetailsScreenView(),
       binding: ShowDetailsScreenBinding(),
     ),
   ];

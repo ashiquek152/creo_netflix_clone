@@ -35,12 +35,14 @@ class ShowDetailsScreenView extends GetView<ShowDetailsScreenController> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         data!.title != null
-                            ? Text(
-                                data!.title.toString(),
-                                style: const TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                            ? Expanded(
+                                child: Text(
+                                  data!.title.toString(),
+                                  style: const TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
                               )
                             : const Text(
                                 "Not available",
@@ -89,17 +91,26 @@ class ShowDetailsScreenView extends GetView<ShowDetailsScreenController> {
                         data: data!.originalLanguage.toString(),
                         title: "Original Language"),
                     DetailsSpanText(
-                        data: data!.originalTitle.toString(),
+                        data: data!.originalTitle == null
+                            ? "Not available"
+                            : data!.originalTitle.toString(),
                         title: "Original Title"),
                     DetailsSpanText(
-                        data: data!.popularity.toString(), title: "Popularity"),
+                        data: data!.popularity.toString() == "null"
+                            ? "Not available"
+                            : data!.popularity.toString(),
+                        title: "Popularity"),
                     DetailsSpanText(
-                        data: data!.releaseDate.toString(),
+                        data: data!.releaseDate ?? "Not available",
                         title: "Release Date"),
                     DetailsSpanText(
-                        data: data!.voteCount.toString(), title: "Vote Count"),
-
-                        SizedBox(height: Get.height*0.02,)
+                        data: data!.voteCount.toString() == "null"
+                            ? "Not available"
+                            : data!.voteCount.toString(),
+                        title: "Vote Count"),
+                    SizedBox(
+                      height: Get.height * 0.02,
+                    )
                   ],
                 ),
               ),

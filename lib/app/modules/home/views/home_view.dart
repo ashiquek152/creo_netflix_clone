@@ -31,20 +31,22 @@ class HomeView extends GetView<HomeController> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                const TopSection(),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: Get.height * 0.02),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
                         SizedBox(height: (Get.height * 0.6)),
-                        TvShowsList(showType: "popular", title: "Popular TV Shows"),
-                        MoviesList(movieType: "now_playing", title: "Now Playing"),
+                        TvShowsList(
+                            showType: "popular", title: "Popular TV Shows"),
+                        MoviesList(
+                            movieType: "now_playing", title: "Now Playing"),
                         // SizedBox(height: Get.height*0.05,)
                       ],
                     ),
                   ),
                 ),
+                 TopSection(),
               ],
             ),
           ],

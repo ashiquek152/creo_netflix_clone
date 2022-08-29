@@ -67,7 +67,7 @@ class AuthenticationController extends GetxController {
         },
         verificationFailed: (FirebaseAuthException exception) {
           log(exception.message.toString());
-          
+
           switch (exception.message) {
             case NETWORK_ERROR:
               erroMessage = "Network Error";
@@ -103,13 +103,12 @@ class AuthenticationController extends GetxController {
       final credential = PhoneAuthProvider.credential(
           verificationId: verificationIDRecieved,
           smsCode: verifyotpCtrlr.text.trim());
-
-      final result = await _auth.signInWithCredential(credential).then((value) {
+      await _auth.signInWithCredential(credential).then((value) {
         verifyotpCtrlr.clear();
         log("Signed In");
         Get.back();
+        otpFieldVisible = false;
       });
-      log(result.toString());
     } on FirebaseAuthException catch (e) {
       snackBar(message: e.message.toString(), title: "Try Again");
     } catch (exception) {

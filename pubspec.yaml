@@ -11,6 +11,7 @@ dependencies:
   firebase_auth: ^3.7.0
   firebase_core: ^1.21.1
   dio: ^4.0.6
+  flutter_native_splash: ^2.2.8
   flutter: 
     sdk: flutter
   bottom_bar: ^2.0.2

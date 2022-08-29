@@ -21,9 +21,9 @@ class BottomNavigationsView extends GetView<BottomNavigationsController> {
           controller: _pageController,
           children: [
             HomeView(),
-             const MovieListScreenView(),
+            const MovieListScreenView(),
             const DownloadsView(),
-            const SettingsView()
+            SettingsView()
           ],
           onPageChanged: (index) {
             _bottomController.swithPageIndex(index);
@@ -38,7 +38,6 @@ class BottomNavigationsView extends GetView<BottomNavigationsController> {
           },
           items: const <BottomBarItem>[
             BottomBarItem(
-              
               icon: Icon(
                 Icons.home,
                 size: 25,

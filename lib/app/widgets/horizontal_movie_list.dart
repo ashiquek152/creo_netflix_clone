@@ -24,22 +24,19 @@ class HorizontalMoviesScrollList extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             GestureDetector(
-              onTap: () {
-                Get.to(ShowDetailsScreenView(data: data));
-              },
-              child: Container(
-                height: Get.height * 0.3,
-                width: Get.width * 0.4,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  image: DecorationImage(
-                      image: NetworkImage(
-                          "https://image.tmdb.org/t/p/w500${data!.posterPath}"),
-                      fit: BoxFit.cover),
-                ),
-              ),
-            ),
+                onTap: () => Get.to(() => ShowDetailsScreenView(data: data)),
+                child: Container(
+                  height: Get.height * 0.3,
+                  width: Get.width * 0.4,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "https://image.tmdb.org/t/p/w500${data!.posterPath}"),
+                        fit: BoxFit.cover),
+                  ),
+                )),
             const SizedBox(width: 10),
           ],
         );

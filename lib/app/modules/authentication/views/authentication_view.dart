@@ -1,5 +1,5 @@
 import 'package:creo_netflix_clone/app/modules/authentication/views/login_screen.dart';
-import 'package:creo_netflix_clone/app/modules/home/views/home_view.dart';
+import 'package:creo_netflix_clone/app/modules/bottom_navigations/views/bottom_navigations_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +10,8 @@ import '../controllers/authentication_controller.dart';
 class AuthenticationView extends GetView<AuthenticationController> {
    AuthenticationView({Key? key}) : super(key: key);
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
+  final authController =Get.put(AuthenticationController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class AuthenticationView extends GetView<AuthenticationController> {
           } else if (snapshot.hasError) {
             return const Center(child: Text("Something went wrong"));
           } else if (snapshot.hasData) {
-            return  HomeView();
+            return  BottomNavigationsView();
           } else {
             return  const LoginScreen();
           }

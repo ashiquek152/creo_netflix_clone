@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -5,6 +6,7 @@ class TopSection extends StatelessWidget {
   const TopSection({
     Key? key,
   }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,11 @@ class TopSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset("assets/logo.ico", fit: BoxFit.cover, width: 35),
-                const Icon(Icons.person, color: Colors.white, size: 35)
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.person, color: Colors.white, size: 35),
+                  tooltip: "Sign out",
+                ),
               ],
             ),
             SizedBox(height: Get.height * 0.02),
