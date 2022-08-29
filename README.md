@@ -2,4 +2,3 @@
 
 ## Netflix clone with TMDB api 
 
-sreerag king
