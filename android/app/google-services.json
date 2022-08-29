@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "750964487127",
+    "project_id": "creo-netflix-clone",
+    "storage_bucket": "creo-netflix-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750964487127:android:b27874eab16c37c3f39192",
+        "android_client_info": {
+          "package_name": "com.creo.creo_netflix_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750964487127-8ieq8raj1aqgdkkjfsplmqkpb16ajau6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.creo.creo_netflix_clone",
+            "certificate_hash": "7c6b3ed3afcef08415f5b53157b0f514ea99d533"
+          }
+        },
+        {
+          "client_id": "750964487127-ka2u6hr554g3pie2u8l0kcvhe86t9s3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB417t1TdUzdzlh_rEHmKD-3Vd2ULGu4io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750964487127-ka2u6hr554g3pie2u8l0kcvhe86t9s3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
