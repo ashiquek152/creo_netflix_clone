@@ -13,6 +13,7 @@ dependencies:
   dio: ^4.0.6
   flutter: 
     sdk: flutter
+  bottom_bar: ^2.0.2
 
 dev_dependencies: 
   flutter_lints: 2.0.1

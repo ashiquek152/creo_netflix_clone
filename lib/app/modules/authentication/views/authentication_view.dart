@@ -1,3 +1,4 @@
+import 'package:creo_netflix_clone/app/modules/authentication/views/login_screen.dart';
 import 'package:creo_netflix_clone/app/modules/home/views/home_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class AuthenticationView extends GetView<AuthenticationController> {
           } else if (snapshot.hasData) {
             return  HomeView();
           } else {
-            return  HomeView();
+            return  const LoginScreen();
           }
         },
       ),
